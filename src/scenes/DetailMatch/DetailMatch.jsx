@@ -45,10 +45,6 @@ const DetailMatch = () => {
     const handleOpenAwayCoach = () => setOpenAwayCoach(true);
     const handleCloseAwayCoach = () => setOpenAwayCoach(false);
 
-    // const [openVenue, setOpenVenue] = useState(false);
-    // const handleOpenVenue = () => setOpenVenue(true);
-    // const handleCloseVenue = () => setOpenVenue(false);
-
     useEffect(() => {
         loadMatch();
     }, [])

@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react"
 import { getTopPlayer } from "../../apis/playerAPI";
 import Player from "../../containers/Player/Player";
-import './TopPlayer.css'
+import './TopPlayers.css'
 
-const TopPlayer = () => {
+const TopPlayers = () => {
     const [topPlayer, setTopPlayer] = useState([]);
-
-    useEffect(() => {
-        loadTopPlayer();
-    }, [])
 
     const loadTopPlayer = async () => {
         const result = await getTopPlayer();
         setTopPlayer(result);
     }
+
+    useEffect(() => {
+        loadTopPlayer();
+    }, [])
 
     return (
         <div className="top-player">
@@ -28,4 +28,4 @@ const TopPlayer = () => {
     )
 }
 
-export default TopPlayer;
+export default TopPlayers;

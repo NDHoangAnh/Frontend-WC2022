@@ -1,6 +1,5 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-// import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
@@ -8,9 +7,15 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import MatchStatistic from '../../containers/MatchStatistic/MatchStatistic';
-import { PostAboutMatch } from '../../scenes/AllPosts/Post';
+import { PostAboutMatch } from '../../scenes/PostForMatchTeam/Post';
 import MatchEvent from '../../containers/MatchEvent/MatchEvent';
 import MatchFormation from '../../containers/MatchFormation/MatchFormation';
+
+TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+};
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -31,12 +36,6 @@ function TabPanel(props) {
         </div>
     );
 }
-
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-};
 
 function a11yProps(index) {
     return {

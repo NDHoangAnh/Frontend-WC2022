@@ -27,4 +27,3 @@ export const getPlayerByTeam = async (idTeam) => {
         console.log(error);
     }
 }
-
